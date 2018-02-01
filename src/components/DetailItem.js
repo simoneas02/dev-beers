@@ -6,7 +6,7 @@ class DetailItem extends Component {
   render() {
 
     if(!this.props.item) {
-      return <p>Select a book to get started!</p>;
+      return <p>Selecione um item para iniciar!</p>;
     }
 
     return(
