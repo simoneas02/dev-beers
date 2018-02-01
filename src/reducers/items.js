@@ -1,6 +1,13 @@
+import {
+	ITEMS_HAS_ERRORED,
+	ITEMS_IS_LOADING,
+	ITEMS_FETCH_DATA_SUCCESS,
+	ITEM_SELECTED
+} from '../js/constants/action-types';
+
 export function itemsHasErrored(state = false, action) {
   switch (action.type) {
-      case 'ITEMS_HAS_ERRORED':
+      case ITEMS_HAS_ERRORED:
           return action.hasErrored;
 
       default:
@@ -10,7 +17,7 @@ export function itemsHasErrored(state = false, action) {
 
 export function itemsIsLoading(state = false, action) {
   switch (action.type) {
-      case 'ITEMS_IS_LOADING':
+      case ITEMS_IS_LOADING:
           return action.isLoading;
 
       default:
@@ -20,7 +27,7 @@ export function itemsIsLoading(state = false, action) {
 
 export function items(state = [], action) {
   switch (action.type) {
-      case 'ITEMS_FETCH_DATA_SUCCESS':
+      case ITEMS_FETCH_DATA_SUCCESS:
           return action.items;
 
       default:
@@ -31,8 +38,8 @@ export function items(state = [], action) {
 export function itemSelected(state = null, action) {
     console.log(action)
     switch(action.type) {
-      case 'ITEM_SELECTED':
-        return action.payload;
+      case ITEM_SELECTED:
+        return action.item;
     }
     return state;
   }
