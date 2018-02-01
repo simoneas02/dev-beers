@@ -38,3 +38,10 @@ export function itemsFetchData(url) {
           .catch(() => dispatch(itemsHasErrored(true)));
   };
 }
+
+export function itemSelected(item) {
+    return {
+      type: 'ITEM_SELECTED',
+      payload: item
+    }
+  }

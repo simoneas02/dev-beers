@@ -27,3 +27,12 @@ export function items(state = [], action) {
           return state;
   }
 }
+
+export function itemSelected(state = null, action) {
+    console.log(action)
+    switch(action.type) {
+      case 'ITEM_SELECTED':
+        return action.payload;
+    }
+    return state;
+  }

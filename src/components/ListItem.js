@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { itemsFetchData } from '../actions';
+import { itemsFetchData, itemSelected } from '../actions';
 
 class ListItem extends Component {
   componentDidMount() {
@@ -19,9 +19,12 @@ class ListItem extends Component {
     return (
       <ul>
         {this.props.items.map((item) => (
-          <li key={item.id}>
-            <div>{item.name}</div>
-            <div>{item.tagline}</div>
+          <li 
+            key={item.id}
+            onClick= { () => this.props.selected(item) }
+          >
+            <span>{item.name}</span>
+            <span>{item.tagline}</span>
           </li>
         ))}
       </ul>
@@ -29,7 +32,7 @@ class ListItem extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
     items: state.items,
     hasErrored: state.itemsHasErrored,
@@ -37,9 +40,10 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    fetchData: (url) => dispatch(itemsFetchData(url))
+    fetchData: url => dispatch(itemsFetchData(url)),
+    selected: item => dispatch(itemSelected(item))
   };
 };
 
