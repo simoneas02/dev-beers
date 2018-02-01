@@ -44,4 +44,4 @@ See [Releases](https://github.com/simoneas02/dev-beers/releases) for detailed ch
 
 ## License
 
-[MIT License](https://github.com/simoneas02/dev-beers/blob/master/LICENSE.md) © [Your Name](https://simoneas02.github.io)
+[MIT License](https://github.com/simoneas02/dev-beers/blob/master/LICENSE.md) © [Simone Amorim](https://simoneas02.github.io)
