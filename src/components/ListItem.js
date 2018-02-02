@@ -18,15 +18,16 @@ class ListItem extends Component {
     }
 
     return (
-      <ul>
+      <ul className='beer-list'>
         {this.props.items.map((item) => (
           <li 
+          className='beer-list__item'
             key={item.id}
             onClick= { () => this.props.selected(item) }
           >
-            <Link to='/detail-item'>
-              <span>{item.name}</span>
-              <span>{item.tagline}</span>
+            <Link className='beer-list__item__link' to='/detail-item'>
+              <span className='beer-list__item__link__name'>{item.name}</span>
+              <span className='beer-list__item__link__tagline'>{item.tagline}</span>
             </Link>
           </li>
         ))}

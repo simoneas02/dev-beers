@@ -12,6 +12,42 @@ body,
   font-family: 'Roboto', sans-serif;
 }
 /* Objects */
+.beer-list {
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0;
+  border: 1px solid #f00;
+  background: #363636;
+}
+.beer-list__item {
+  width: 100%;
+  padding: 20px;
+  list-style: none;
+  margin: 0 auto 5px auto;
+  max-width: 600px;
+  border: 1px solid #f00;
+  background: #a0a0a0;
+  cursor: pointer;
+}
+.beer-list__item:hover {
+  background: #5e5e5e;
+}
+.beer-list__item__link {
+  text-decoration: none;
+  color: #eaeaea;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+}
+.beer-list__item__link__name {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+.beer-list__item__link__tagline {
+  font-size: 14px;
+}
 /* components */
 .header {
   border-top: 8px solid #fffc00;

@@ -1,0 +1,35 @@
+.beer-list
+  width 100%
+  max-width 800px
+  margin $spacing-level2 auto
+  padding 0
+  border 1px solid $dev-color
+  background $primary-color
+
+.beer-list__item
+  width 100%
+  padding $spacing-level2
+  list-style none
+  margin 0 auto 5px auto
+  max-width 600px
+  border 1px solid $dev-color
+  background $item-bg
+  cursor pointer
+
+.beer-list__item:hover
+  background $item-hover
+
+.beer-list__item__link
+  text-decoration none
+  color $text-color-I
+  font-family 'Roboto', sans-serif
+  font-weight 500
+  display flex
+  flex-direction column
+
+.beer-list__item__link__name
+  font-size 20px
+  margin-bottom 2px
+
+.beer-list__item__link__tagline
+  font-size 14px
