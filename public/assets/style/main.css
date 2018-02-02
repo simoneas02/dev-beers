@@ -9,9 +9,57 @@ html,
 body,
 #App {
   height: 100%;
+  font-family: 'Roboto', sans-serif;
 }
 /* Objects */
 /* components */
+.header {
+  border-top: 8px solid #fffc00;
+  background: #363636;
+  width: 100%;
+}
+.header__block {
+  border: 1px solid #f00;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.header__block__title {
+  border: 1px solid #f00;
+  margin: 0;
+  color: #fff;
+  font-weight: 300;
+  font-size: 48px;
+}
+@media (min-width: 700px) {
+  .header__block__title {
+    font-size: 62px;
+  }
+}
+.header__block__text {
+  border: 1px solid #f00;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+.header__block__description {
+  color: #a0a0a0;
+  margin-top: 10px 0 0 0;
+  font-size: 18px;
+}
+@media (min-width: 700px) {
+  .header__block__description {
+    font-size: 22px;
+  }
+}
+.header__block__img {
+  width: 25px;
+  margin-left: 10px;
+}
 .footer {
   display: flex;
   align-items: center;
@@ -24,7 +72,7 @@ body,
   font-size: 12px;
   width: 100%;
   text-align: center;
-  color: #fff;
+  color: #5e5e5e;
 }
 @media (max-width: 560px) {
   .heart {
