@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import close from '../assets/icon/close.svg';
-//import '../assets/style/header.css';
 
 class DetailItem extends Component {
 

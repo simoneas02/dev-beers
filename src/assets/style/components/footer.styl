@@ -1,0 +1,57 @@
+/************************************************/
+/* Footer */
+
+.footer
+  display flex
+  align-items center
+  justify-content center
+  width 100%
+  background $secondary-color
+  min-height 50px  
+
+.heart
+  font-size 12px
+  width 100%
+  text-align center
+  color #fff
+
+@media(max-width 560px)
+  .heart
+      height 10%
+
+.heart__css
+  position relative
+  display inline-block
+  margin 0 5px
+  width 10px
+  height 10px
+  animation pulse .5s infinite alternate ease-in
+  background-color $heart
+
+.heart__css:before
+  position absolute
+  top 0
+  left 50%
+  width 10px
+  height 10px
+  content ''
+  border-radius 50%
+  background-color $heart
+
+.heart__css:after
+  position absolute
+  top 50%
+  left 0
+  width 10px
+  height 10px
+  content ''
+  border-radius 50%
+  background-color $heart
+
+@keyframes pulse 
+  from {transform: rotate(-135deg) scale(1)}
+  to   {transform: rotate(-135deg) scale(1.2)}
+
+.heart__author
+  text-decoration none
+  color $heart

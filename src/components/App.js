@@ -6,6 +6,8 @@ import DetailItem from './DetailItem';
 import Header from './Header';
 import Footer from './Footer';
 
+import '../assets/style/main.styl';
+
 class App extends Component {
   render() {
     return (
