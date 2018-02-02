@@ -11,9 +11,9 @@ import '../assets/style/main.styl';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className='container'>
         <Header />
-        <main>
+        <main className='main'>
           <Switch>
             <Route exact path='/' component={ListItem} />
             <Route path='/detail-item' component={DetailItem} />
