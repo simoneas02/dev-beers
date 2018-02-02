@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { itemsFetchData, itemSelected } from '../actions';
+import { Link } from 'react-router-dom';
 
 class ListItem extends Component {
   componentDidMount() {
@@ -23,8 +24,10 @@ class ListItem extends Component {
             key={item.id}
             onClick= { () => this.props.selected(item) }
           >
-            <span>{item.name}</span>
-            <span>{item.tagline}</span>
+            <Link to='/detail-item'>
+              <span>{item.name}</span>
+              <span>{item.tagline}</span>
+            </Link>
           </li>
         ))}
       </ul>

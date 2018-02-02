@@ -36,7 +36,6 @@ export function items(state = [], action) {
 }
 
 export function itemSelected(state = null, action) {
-    console.log(action)
     switch(action.type) {
       case ITEM_SELECTED:
         return action.item;
