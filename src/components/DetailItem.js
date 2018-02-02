@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
+import close from '../assets/icon/close.svg';
+//import '../assets/style/header.css';
+
 class DetailItem extends Component {
 
   render() {
@@ -11,7 +14,9 @@ class DetailItem extends Component {
     return(
       <div>
         <Link to='/'>
-          Voltar
+          <button>
+            <img src={close} alt='close' />
+          </button>
         </Link>
         <img src={this.props.item.image_url} alt={this.props.item.name} />
         <h3>{this.props.item.name}</h3>
