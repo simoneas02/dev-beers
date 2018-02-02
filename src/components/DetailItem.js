@@ -11,16 +11,19 @@ class DetailItem extends Component {
     if(!this.props.item) return null;
     
     return(
-      <div>
+      <div className='beer-detail'>
         <Link to='/'>
-          <button>
-            <img src={close} alt='close' />
+          <button className='beer-detail__btn'>
+            Voltar
           </button>
         </Link>
-        <img src={this.props.item.image_url} alt={this.props.item.name} />
-        <h3>{this.props.item.name}</h3>
-        <span>{this.props.item.tagline}</span>
-        <p>{this.props.item.description}</p>
+        <img className='beer-detail__img' src={this.props.item.image_url} alt={this.props.item.name} />
+
+        <div className='beer-detail__block'>
+          <h3 className='beer-detail__name'>{this.props.item.name}</h3>
+          <span className='beer-detail__tagline'>{this.props.item.tagline}</span>
+          <p className='beer-detail__description'>{this.props.item.description}</p>
+        </div>
       </div>
       
     );

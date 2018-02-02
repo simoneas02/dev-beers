@@ -1,0 +1,56 @@
+.beer-detail
+  display flex
+  align-items center
+  justify-content center
+  border 1px solid $dev-color
+  flex 1
+  padding $spacing-level1 $spacing-level3
+  margin $spacing-level1 auto
+  position relative
+
+.beer-detail__btn
+  position absolute
+  top $spacing-level1 
+  right 10px
+  background $secondary-color
+  padding $spacing-level1
+  cursor pointer
+  font-weight 700
+  border none
+  border-radius 2px
+
+@media(min-width 700px)
+  .beer-detail__btn
+    right 100px
+
+.beer-detail__img
+  width 100px
+  height 400px
+  margin-right $spacing-level2
+
+@media(min-width 700px)
+  .beer-detail__img
+    width 200px
+    height 500px
+
+.beer-detail__block
+  border 1px solid $dev-color
+  width 100%
+  max-width 350px
+
+.beer-detail__name
+  font-size 32px
+  color $text-color-II
+  font-weight 300
+  margin 0 0 $spacing-level1 0
+
+.beer-detail__tagline
+  font-size 18px
+  color $text-color-I
+  font-weight 300
+
+.beer-detail__description
+  font-size 14px
+  color $text-color-I
+  margin $spacing-level1 0 0 0
+  font-weight 300

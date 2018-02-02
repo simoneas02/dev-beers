@@ -17,7 +17,7 @@ body,
   max-width: 800px;
   margin: 40px auto;
   padding: 0;
-  border: 1px solid #f00;
+  border: 1px solid $dev-color;
   background: #363636;
 }
 .beer-list__item {
@@ -26,7 +26,7 @@ body,
   list-style: none;
   margin: 0 auto 5px auto;
   max-width: 600px;
-  border: 1px solid #f00;
+  border: 1px solid $dev-color;
   background: #a0a0a0;
   cursor: pointer;
 }
@@ -48,6 +48,65 @@ body,
 .beer-list__item__link__tagline {
   font-size: 14px;
 }
+.beer-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $dev-color;
+  flex: 1;
+  padding: 10px 40px;
+  margin: 10px auto;
+  position: relative;
+}
+.beer-detail__btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #fffc00;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  border: none;
+  border-radius: 2px;
+}
+@media (min-width: 700px) {
+  .beer-detail__btn {
+    right: 100px;
+  }
+}
+.beer-detail__img {
+  width: 100px;
+  height: 400px;
+  margin-right: 20px;
+}
+@media (min-width: 700px) {
+  .beer-detail__img {
+    width: 200px;
+    height: 500px;
+  }
+}
+.beer-detail__block {
+  border: 1px solid $dev-color;
+  width: 100%;
+  max-width: 350px;
+}
+.beer-detail__name {
+  font-size: 32px;
+  color: #fff;
+  font-weight: 300;
+  margin: 0 0 10px 0;
+}
+.beer-detail__tagline {
+  font-size: 18px;
+  color: #eaeaea;
+  font-weight: 300;
+}
+.beer-detail__description {
+  font-size: 14px;
+  color: #eaeaea;
+  margin: 10px 0 0 0;
+  font-weight: 300;
+}
 /* components */
 .container {
   width: 100%;
@@ -56,7 +115,7 @@ body,
   font: 500 14px/1.67 'Roboto', sans-serif;
   text-rendering: optimizeSpeed;
   letter-spacing: 0;
-  border: 1px solid #f00;
+  border: 1px solid $dev-color;
   background: #363636;
   display: flex;
   flex-direction: column;
@@ -67,7 +126,7 @@ body,
   width: 100%;
 }
 .header__block {
-  border: 1px solid #f00;
+  border: 1px solid $dev-color;
   margin: 0 auto;
   width: 100%;
   padding: 20px;
@@ -77,7 +136,7 @@ body,
   flex-direction: column;
 }
 .header__block__title {
-  border: 1px solid #f00;
+  border: 1px solid $dev-color;
   margin: 0;
   color: #fff;
   font-weight: 300;
@@ -89,7 +148,7 @@ body,
   }
 }
 .header__block__text {
-  border: 1px solid #f00;
+  border: 1px solid $dev-color;
   display: flex;
   align-items: baseline;
   justify-content: center;
@@ -113,6 +172,7 @@ body,
   width: 100%;
   margin: 0 auto;
   background: #363636;
+  flex: 1;
 }
 .footer {
   display: flex;

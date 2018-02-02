@@ -6,7 +6,7 @@ import beer from '../assets/img/beer.png';
 
 const Header = () => (
   <header className='header'>
-    <GithubCorner size={80} octoColor="#363636" bannerColor='#fffc00' href='https://github.com/simoneas02/dev-beers#readme' />
+    <GithubCorner size={80} octoColor="#363636" bannerColor='#fffc00' href='https://github.com/simoneas02/dev-beers#readme' target='_blank'/>
     
     <div className='header__block'>
       <h1 className='header__block__title'>Dev Beers</h1>
