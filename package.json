@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "concurrently": "^3.5.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-github-corner": "^2.1.0",
@@ -11,10 +12,11 @@
     "react-scripts": "1.1.0",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
+    "stylus": "^0.54.5",
     "whatwg-fetch": "^2.0.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently \"react-scripts start\" \"stylus -w ./src/assets/style/main.styl -o ./public/assets/style/main.css\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
