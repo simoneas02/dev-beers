@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "concurrently": "^3.5.1",
+    "gh-pages": "^1.1.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-github-corner": "^2.1.0",
@@ -15,7 +16,10 @@
     "stylus": "^0.54.5",
     "whatwg-fetch": "^2.0.3"
   },
+  "homepage": "https://simoneas02.github.io/dev-beers/",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "concurrently \"react-scripts start\" \"stylus -w ./src/assets/style/main.styl -o ./public/assets/style/main.css\"",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

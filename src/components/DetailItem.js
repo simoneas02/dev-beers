@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import close from '../assets/icon/close.svg';
-
 class DetailItem extends Component {
 
   render() {
