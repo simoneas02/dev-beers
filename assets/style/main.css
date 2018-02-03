@@ -1,0 +1,261 @@
+/* Settings */
+/* Tools */
+/* Generics */
+* {
+  box-sizing: border-box;
+}
+/* Base */
+html,
+body,
+#App {
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+/* Objects */
+.beer-list {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 0;
+  border: 1px solid $dev-color;
+  background: #363636;
+}
+.beer-list__item {
+  width: 100%;
+  padding: 10px;
+  list-style: none;
+  margin: 0 auto 5px auto;
+  max-width: 600px;
+  border: 1px solid $dev-color;
+  background: #a0a0a0;
+  cursor: pointer;
+}
+.beer-list__item:hover {
+  background: #5e5e5e;
+}
+.beer-list__item__link {
+  text-decoration: none;
+  color: #eaeaea;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+}
+.beer-list__item__link__name {
+  font-size: 20px;
+  margin-bottom: 2px;
+}
+.beer-list__item__link__tagline {
+  font-size: 14px;
+}
+.beer-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $dev-color;
+  flex: 1;
+  padding: 10px 40px;
+  margin: 10px auto;
+  position: relative;
+}
+.beer-detail__btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #fffc00;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  border: none;
+  border-radius: 2px;
+}
+@media (min-width: 700px) {
+  .beer-detail__btn {
+    right: 100px;
+  }
+}
+.beer-detail__img {
+  width: 100px;
+  height: 400px;
+  margin-right: 20px;
+}
+@media (min-width: 700px) {
+  .beer-detail__img {
+    width: 200px;
+    height: 500px;
+  }
+}
+.beer-detail__block {
+  border: 1px solid $dev-color;
+  width: 100%;
+  max-width: 350px;
+}
+.beer-detail__name {
+  font-size: 32px;
+  color: #fff;
+  font-weight: 300;
+  margin: 0 0 10px 0;
+}
+.beer-detail__tagline {
+  font-size: 18px;
+  color: #eaeaea;
+  font-weight: 300;
+}
+.beer-detail__description {
+  font-size: 14px;
+  color: #eaeaea;
+  margin: 10px 0 0 0;
+  font-weight: 300;
+}
+/* components */
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  font: 500 14px/1.67 'Roboto', sans-serif;
+  text-rendering: optimizeSpeed;
+  letter-spacing: 0;
+  border: 1px solid $dev-color;
+  background: #363636;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  border-top: 8px solid #fffc00;
+  background: #363636;
+  width: 100%;
+}
+.header__block {
+  border: 1px solid $dev-color;
+  margin: 0 auto;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.header__block__title {
+  border: 1px solid $dev-color;
+  margin: 0;
+  color: #fff;
+  font-weight: 300;
+  font-size: 48px;
+}
+@media (min-width: 700px) {
+  .header__block__title {
+    font-size: 62px;
+  }
+}
+.header__block__text {
+  border: 1px solid $dev-color;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+.header__block__description {
+  color: #a0a0a0;
+  margin-top: 10px 0 0 0;
+  font-size: 18px;
+  margin: 0;
+}
+@media (min-width: 700px) {
+  .header__block__description {
+    font-size: 22px;
+  }
+}
+.header__block__img {
+  width: 25px;
+  margin-left: 10px;
+}
+.main {
+  width: 100%;
+  margin: 0 auto;
+  background: #363636;
+  flex: 1;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #fffc00;
+  min-height: 50px;
+}
+.heart {
+  font-size: 12px;
+  width: 100%;
+  text-align: center;
+  color: #5e5e5e;
+}
+@media (max-width: 560px) {
+  .heart {
+    height: 10%;
+  }
+}
+.heart__css {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+  width: 10px;
+  height: 10px;
+  animation: pulse 0.5s infinite alternate ease-in;
+  background-color: #fc01f2;
+}
+.heart__css:before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  content: '';
+  border-radius: 50%;
+  background-color: #fc01f2;
+}
+.heart__css:after {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  content: '';
+  border-radius: 50%;
+  background-color: #fc01f2;
+}
+.heart__author {
+  text-decoration: none;
+  color: #fc01f2;
+}
+@-moz-keyframes pulse {
+  from {
+    transform: rotate(-135deg) scale(1);
+  }
+  to {
+    transform: rotate(-135deg) scale(1.2);
+  }
+}
+@-webkit-keyframes pulse {
+  from {
+    transform: rotate(-135deg) scale(1);
+  }
+  to {
+    transform: rotate(-135deg) scale(1.2);
+  }
+}
+@-o-keyframes pulse {
+  from {
+    transform: rotate(-135deg) scale(1);
+  }
+  to {
+    transform: rotate(-135deg) scale(1.2);
+  }
+}
+@keyframes pulse {
+  from {
+    transform: rotate(-135deg) scale(1);
+  }
+  to {
+    transform: rotate(-135deg) scale(1.2);
+  }
+}
+/* Trumps */
