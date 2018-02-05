@@ -72,12 +72,17 @@ body,
   margin: 0;
 }
 .beer-list-has-errored {
+/*
+  //flex 1
+  justify-content center
+  align-items center
+  flex-direction column*/
   display: flex;
-  flex: 1;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   width: 100%;
+  margin: 40px auto;
 }
 .beer-list-has-errored__img {
   width: 60%;
@@ -163,7 +168,6 @@ body,
 .dont-has-item {
   position: relative;
   display: flex;
-  flex: 1;
 }
 .dont-has-item__block {
   margin: 40px auto;
@@ -255,7 +259,6 @@ body,
   width: 100%;
   margin: 0 auto;
   background: #363636;
-  display: flex;
   flex: 1;
 }
 .footer {
