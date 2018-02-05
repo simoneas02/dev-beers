@@ -15,7 +15,7 @@ class App extends Component {
         <Header />
         <main className='main'>
           <Switch>
-            <Route exact path='/' component={ListItem} />
+            <Route exact path={process.env.PUBLIC_URL + '/'} component={ListItem} />
             <Route path='/detail-item' component={DetailItem} />
           </Switch>
         </main>
