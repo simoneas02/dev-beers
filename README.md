@@ -1,6 +1,6 @@
 # Dev Beers
 
-> 🍺 A collections of the beer for devellopers!!! 🍻💻
+> 🍺 Beers list with React / Redux!!! 🍻💻
 
 
 ## Run the project local
@@ -26,9 +26,11 @@ $ yarn start
 Go to: [http://localhost:3000/](http://localhost:3000/)
 
 
-## Automatic Tasks
+## Tasks available
 
-- `$ yarn start`: Watch the files to build and start a static server.
+- `$ yarn start`: Start the development environment server.
+- `$ yarn build`: Build for production.
+- `$ yarn deploy`: Build for deploy.
 
 
 ## Contributing
