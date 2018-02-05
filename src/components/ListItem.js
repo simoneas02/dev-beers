@@ -4,6 +4,7 @@ import { itemsFetchData, itemSelected } from '../actions';
 import { Link } from 'react-router-dom';
 
 import loading from '../assets/icon/loading.svg';
+import beerFail from '../assets/img/beer-fail.jpg';
 
 class ListItem extends Component {
   componentDidMount() {
@@ -12,7 +13,12 @@ class ListItem extends Component {
 
   render() {
     if (this.props.hasErrored) {
-      return <p className='beer-hasErrored'>Ocorreu algum erro ao carregar os itens, por favor verifique sua conexão e carregue os dados novamente!</p>;
+      return(
+        <div className='beer-list-has-errored'>
+          <img className='beer-list-has-errored__img' src={beerFail} alt='beer' />
+          <p className='beer-list-has-errored__text'>Ocorreu algum erro ao carregar os itens, por favor verifique sua conexão e tente acessar nossa página novamente!!!</p>;
+        </div>
+      )
     }
 
     if (this.props.isLoading) {

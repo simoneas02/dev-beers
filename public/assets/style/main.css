@@ -62,7 +62,7 @@ body,
   flex-direction: column;
 }
 .beer-list-loading__img {
-  width: 150px;
+  width: 120px;
   margin: 0;
 }
 .beer-list-loading__text {
@@ -70,6 +70,36 @@ body,
   font-size: 20px;
   font-weight: 300;
   margin: 0;
+}
+.beer-list-has-errored {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.beer-list-has-errored__img {
+  width: 60%;
+}
+@media (min-width: 700px) {
+  .beer-list-has-errored__img {
+    width: 30%;
+  }
+}
+.beer-list-has-errored__text {
+  color: #fffc00;
+  font-size: 18px;
+  font-weight: 300;
+  max-width: 250px;
+  width: 100%;
+  margin: 0;
+}
+@media (min-width: 700px) {
+  .beer-list-has-errored__text {
+    max-width: 400px;
+    font-size: 22px;
+  }
 }
 .beer-detail {
   display: flex;
