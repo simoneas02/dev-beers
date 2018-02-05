@@ -10,7 +10,7 @@ class ListItem extends Component {
 
   render() {
     if (this.props.hasErrored) {
-      return <p>Ocorreu algum erro ao carregar os itens, por favor verifique sua conexão e carregue os dados novamente!</p>;
+      return <p className='beer-hasErrored'>Ocorreu algum erro ao carregar os itens, por favor verifique sua conexão e carregue os dados novamente!</p>;
     }
 
     if (this.props.isLoading) {

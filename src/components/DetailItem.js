@@ -18,6 +18,7 @@ class DetailItem extends Component {
           </Link>
 
           <div className='dont-has-item__block'>
+            <img className='dont-has-item__block__img' src={beerDetail} alt='beer' />
             <p className='dont-has-item__msg'>Click no botão voltar e selecione um item da lista!!!</p>
           </div>
         </div>
