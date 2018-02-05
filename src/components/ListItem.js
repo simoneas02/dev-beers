@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import { itemsFetchData, itemSelected } from '../actions';
 import { Link } from 'react-router-dom';
 
+import loading from '../assets/icon/loading.svg';
+
 class ListItem extends Component {
   componentDidMount() {
     this.props.fetchData('https://api.punkapi.com/v2/beers/');
@@ -14,7 +16,12 @@ class ListItem extends Component {
     }
 
     if (this.props.isLoading) {
-      return <p>Loading…</p>;
+      return(
+        <div className='beer-list-loading'>
+          <img className='beer-list-loading__img' src={loading} alt='loading' />
+          <p className='beer-list-loading__text'>Carregando...</p>
+        </div>
+      )
     }
 
     return (
